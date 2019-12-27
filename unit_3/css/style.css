@@ -1,0 +1,10 @@
+label {
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 5px;
+   
+}
+
+label + div {
+    display: inline-block;
+}
