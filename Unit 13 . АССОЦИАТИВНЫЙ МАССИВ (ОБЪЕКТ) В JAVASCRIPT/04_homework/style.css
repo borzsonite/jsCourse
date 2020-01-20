@@ -1,0 +1,43 @@
+html, body {
+    font-family: serif;
+}
+body {
+    margin: 20px;
+}
+
+pre {
+    padding: 7px;
+    background: #cccccc;
+    display: inline-block;
+    margin-top: 0;
+}
+
+input {
+    display: block;
+}
+
+button {
+    margin-bottom: 5px;
+    display: block;
+}
+
+div[class*="out"]{
+    background-color: rgba(241, 146, 154, 0.514);
+    display: inline-block;
+    margin: 3px;
+    padding: 3px;
+}
+
+
+.black {
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    float: left;
+}
+.white {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    float: left;
+}

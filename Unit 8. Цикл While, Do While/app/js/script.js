@@ -16,15 +16,17 @@ while (p <= 3) {
     p++;
 }
 console.log('sum = ' + sum);
+
+
 // ****
 // ****
 // ****
 let out = document.querySelector('.out');
 p = 0;
 let outStr = '';
-let flag = 3;
+let flag = 4;
 
-while (p < 4) {
+while (p < 5) {
     let p1 = 0;
     while (p1 < 4) {
         if (p1 < flag) {
