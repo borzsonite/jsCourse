@@ -6,8 +6,10 @@ let a1 = {
 };
 document.querySelector('.b-1').onclick = () => {
     let out = '';
-
-    showResult('out-1', a1);
+    for (key in a1) {
+        out += `${key}: ${a1[key]}<br>`;
+    };
+    showResult('out-1', out);
 }
 
 // Task 2.
@@ -38,7 +40,7 @@ let a3 = {
 document.querySelector('.b-3').onclick = () => {
     let out = '';
     for (let key in a3) {
-        if (key.length > 4) out += `${key}<br>`;
+        if (key.length > 4) out += `${a3[key]}<br>`;
     }
     showResult('out-3', out);
 }
@@ -95,14 +97,41 @@ document.querySelector('.b-6').onclick = () => {
 // Создайте ассоциативный массив a7, два input(u7 - key__input, u7 - value__input) и кнопку.При нажатии кнопки добавляйте в массив новое значение с соответствующим ключем.Выводите массив на страницу.
 let a7 = {};
 document.querySelector('.b-7').onclick = () => {
+    let out = '';
     let userKey = document.querySelector('.u7-key__input').value;
     let userVal = document.querySelector('.u7-value__input').value;
-    console.log(userKey);
-    console.log(userVal);
     a7[userKey] = userVal;
-    showResult('out-7', a7);
+    for (let key in a7) {
+        out += `${key}: ${a7[key]}<br>`;
+    }
+    showResult('out-7', out);
 }
 
+
+// Task 8.
+// Добавьте к предыдущей задачи input.u8 - key__input и кнопку.При нажатии кнопки - удаляйте значение с соответствующим ключем.Выводите массив на страницу.
+
+let a8 = {};
+document.querySelector('.b-8').onclick = () => {
+    let out = '';
+    let userKey = document.querySelector('.u7_1-key__input').value;
+    let userVal = document.querySelector('.u7_1-value__input').value;
+    a8[userKey] = userVal;
+    for (let key in a8) {
+        out += `${key}: ${a8[key]}<br>`;
+    }
+    showResult('out-8', out);
+}
+
+document.querySelector('.b-8_1').onclick = () => {
+    let out = '';
+    let keyToDel = document.querySelector('.u8-key__input').value;
+    delete a8[keyToDel];
+    for (let key in a8) {
+        out += `${key}: ${a8[key]}<br>`;
+    }
+    showResult('out-8', out);
+}
 
 
 
@@ -117,5 +146,5 @@ function showResult(out, arr) {
     for (let key in arr) {
         output += `${key}: ${arr[key]}<br>`
     }
-    document.querySelector(`.${out}`).innerHTML = output;
+    document.querySelector(`.${out}`).innerHTML = arr;
 }
